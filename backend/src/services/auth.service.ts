@@ -1,8 +1,8 @@
 import bcrypt from 'bcryptjs';
 import { sign } from 'hono/jwt';
 import { OAuth2Client } from 'google-auth-library';
-import { userRepository } from '../repositories/user.repository';
-import type { RegisterDTO, LoginDTO } from '../models/auth.schema';
+import { userRepository } from '../repositories/user.repository.js';
+import type { RegisterDTO, LoginDTO } from '../models/auth.schema.js';
 
 const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const JWT_SECRET = process.env.JWT_SECRET || 'super-secret-zenflow-key';
@@ -59,7 +59,7 @@ export class AuthService {
       sub: userId,
       exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7, // 1 week
     };
-    return sign(payload, JWT_SECRET);
+    return sign(payload, JWT_SECRET, 'HS256');
   }
 }
 

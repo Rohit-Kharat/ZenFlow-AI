@@ -9,14 +9,14 @@
   "dependencies": {
     "@hono/node-server": "^1.19.13",
     "@hono/zod-validator": "^0.7.6",
-    "@prisma/client": "^7.7.0",
+    "@prisma/client": "^6.19.3",
     "bcryptjs": "^3.0.3",
     "dotenv": "^17.4.1",
     "google-auth-library": "^10.6.2",
     "hono": "^4.12.12",
     "mongodb": "^7.1.1",
     "openai": "^6.34.0",
-    "prisma": "^7.7.0",
+    "prisma": "^6.19.3",
     "zod": "^4.3.6"
   },
   "devDependencies": {

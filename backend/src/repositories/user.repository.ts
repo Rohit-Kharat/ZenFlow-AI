@@ -1,5 +1,5 @@
-import { prisma } from '../lib/prisma';
-import { RegisterDTO } from '../models/auth.schema';
+import { prisma } from '../lib/prisma.js';
+import type { RegisterDTO } from '../models/auth.schema.js';
 
 export class UserRepository {
   async findByEmail(email: string) {

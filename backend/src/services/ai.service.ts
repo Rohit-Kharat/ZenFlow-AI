@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
 import { MongoClient } from 'mongodb';
-import { wellnessService } from './wellness.service';
+import { wellnessService } from './wellness.service.js';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,

@@ -1,5 +1,5 @@
-import { wellnessRepository } from '../repositories/wellness.repository';
-import type { WellnessLogDTO } from '../models/wellness.schema';
+import { wellnessRepository } from '../repositories/wellness.repository.js';
+import type { WellnessLogDTO } from '../models/wellness.schema.js';
 
 export class WellnessService {
   async logWellness(userId: string, data: WellnessLogDTO) {

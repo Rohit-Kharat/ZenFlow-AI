@@ -1,5 +1,5 @@
 import type { Context } from 'hono';
-import { wellnessService } from '../../services/wellness.service';
+import { wellnessService } from '../../services/wellness.service.js';
 
 export class WellnessController {
   async createLog(c: Context) {

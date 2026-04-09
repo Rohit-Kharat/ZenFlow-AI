@@ -1,5 +1,5 @@
 import type { Context } from 'hono';
-import { authService } from '../../services/auth.service';
+import { authService } from '../../services/auth.service.js';
 
 export class AuthController {
   async register(c: Context) {

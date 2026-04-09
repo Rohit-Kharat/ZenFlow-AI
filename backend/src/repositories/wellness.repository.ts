@@ -1,5 +1,5 @@
-import { prisma } from '../lib/prisma';
-import type { WellnessLogDTO } from '../models/wellness.schema';
+import { prisma } from '../lib/prisma.js';
+import type { WellnessLogDTO } from '../models/wellness.schema.js';
 
 export class WellnessRepository {
   async createLog(userId: string, data: WellnessLogDTO) {
