@@ -8,6 +8,7 @@ export class AuthController {
       const result = await authService.register(data);
       return c.json({ success: true, data: result }, 201);
     } catch (err: any) {
+      console.error('Registration Error:', err);
       return c.json({ success: false, message: err.message }, 400);
     }
   }

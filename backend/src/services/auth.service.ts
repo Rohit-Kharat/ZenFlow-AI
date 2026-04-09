@@ -1,4 +1,4 @@
-import bcrypt from 'bcryptjs';
+import * as bcrypt from 'bcryptjs';
 import { sign } from 'hono/jwt';
 import { OAuth2Client } from 'google-auth-library';
 import { userRepository } from '../repositories/user.repository.js';
@@ -14,7 +14,7 @@ export class AuthService {
       throw new Error('User already exists');
     }
 
-    const passwordHash = await bcrypt.hash(data.passwordHash || data.password, 10);
+    const passwordHash = await bcrypt.hash(data.password, 10);
     const user = await userRepository.create({
       ...data,
       passwordHash,
