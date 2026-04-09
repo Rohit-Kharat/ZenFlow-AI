@@ -4,7 +4,7 @@ import { wellnessService } from '../../services/wellness.service.js';
 export class WellnessController {
   async createLog(c: Context) {
     const data = await c.req.json();
-    const payload = c.get('jwtPayload');
+    const payload = c.get('jwtPayload') as { sub: string };
     const userId = payload.sub; 
     
     const log = await wellnessService.logWellness(userId, data);
@@ -12,7 +12,7 @@ export class WellnessController {
   }
 
   async getDashboard(c: Context) {
-    const payload = c.get('jwtPayload');
+    const payload = c.get('jwtPayload') as { sub: string };
     const userId = payload.sub;
     
     const dashboardData = await wellnessService.getDashboardData(userId);
