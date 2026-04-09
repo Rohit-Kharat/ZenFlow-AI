@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+}
+
+model User {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  email         String    @unique
+  name          String?
+  passwordHash  String?   // Nullable for OAuth accounts
+  authProvider  String    @default("local") // "local" | "google"
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  wellnessLogs  WellnessLog[]
+  routines      YogaRoutine[]
+  gamification  Gamification?
+}
+
+model WellnessLog {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @db.ObjectId
+  user        User      @relation(fields: [userId], references: [id])
+  moodScore   Int       // 1 to 10
+  sleepHours  Float
+  activity    String?   // E.g., "30m Yoga", "Walk"
+  notes       String?
+  loggedAt    DateTime  @default(now())
+}
+
+model YogaRoutine {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  description String
+  tags        String[]
+  userId      String    @db.ObjectId // The user this routine is personalized for
+  user        User      @relation(fields: [userId], references: [id])
+  vectors     Float[]   // Storing embeddings for MongoDB Atlas Vector Search
+  videos      Video[]
+}
+
+model Video {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  url         String
+  duration    Int       // In seconds
+  routineId   String?   @db.ObjectId
+  routine     YogaRoutine? @relation(fields: [routineId], references: [id])
+}
+
+model Gamification {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String    @unique @db.ObjectId
+  user        User      @relation(fields: [userId], references: [id])
+  points      Int       @default(0)
+  streakDays  Int       @default(0)
+  badges      String[]  // E.g., ["Early Bird", "7-Day Streak"]
+}

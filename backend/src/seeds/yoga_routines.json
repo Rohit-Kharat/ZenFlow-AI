@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Sun Salutation (Surya Namaskar)",
+    "description": "A dynamic sequence of 12 poses to warm up the body and synchronize breath with movement.",
+    "tags": ["morning", "energy", "warm-up", "full-body"],
+    "videos": []
+  },
+  {
+    "title": "Restorative Flow for Anxiety",
+    "description": "Gentle poses like Child's Pose and Legs-up-the-Wall to calm the nervous system.",
+    "tags": ["anxiety", "calm", "relaxing", "evening"],
+    "videos": []
+  },
+  {
+    "title": "Deep Sleep Sequence",
+    "description": "Slow, grounding poses designed to prepare the mind and body for restful sleep.",
+    "tags": ["sleep", "insomnia", "evening", "relaxing"],
+    "videos": []
+  },
+  {
+    "title": "Power Yoga for Focus",
+    "description": "Intense poses like Warrior III and Crow Pose to build strength and mental clarity.",
+    "tags": ["focus", "strength", "energy", "intermediate"],
+    "videos": []
+  },
+  {
+    "title": "Lower Back Relief",
+    "description": "Targeted stretches like Cat-Cow and Sphinx pose to alleviate tension in the lower spine.",
+    "tags": ["back-pain", "relief", "gentle", "healing"],
+    "videos": []
+  }
+]
