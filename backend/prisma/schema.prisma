@@ -42,9 +42,9 @@ model YogaRoutine {
   title       String
   description String
   tags        String[]
-  userId      String    @db.ObjectId // The user this routine is personalized for
-  user        User      @relation(fields: [userId], references: [id])
-  vectors     Float[]   // Storing embeddings for MongoDB Atlas Vector Search
+  userId      String?   @db.ObjectId // The user this routine is personalized for (null for public)
+  user        User?     @relation(fields: [userId], references: [id])
+  steps       Json?     // Stored as [{pose: string, duration: string}]
   videos      Video[]
 }
 

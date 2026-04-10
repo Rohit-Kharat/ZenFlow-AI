@@ -15,7 +15,6 @@
     "google-auth-library": "^10.6.2",
     "hono": "^4.12.12",
     "mongodb": "^7.1.1",
-    "openai": "^6.34.0",
     "prisma": "^6.19.3",
     "zod": "^4.3.6"
   },

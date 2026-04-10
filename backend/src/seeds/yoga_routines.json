@@ -2,31 +2,169 @@
   {
     "title": "Sun Salutation (Surya Namaskar)",
     "description": "A dynamic sequence of 12 poses to warm up the body and synchronize breath with movement.",
-    "tags": ["morning", "energy", "warm-up", "full-body"],
+    "tags": ["morning", "energy", "warm-up", "full-body", "intermediate"],
+    "steps": [
+      { "pose": "Pranamasana (Prayer Pose)", "duration": "30s" },
+      { "pose": "Hastauttanasana (Raised Arms Pose)", "duration": "30s" },
+      { "pose": "Padahastasana (Hand to Foot Pose)", "duration": "1 min" },
+      { "pose": "Ashwa Sanchalanasana (Equestrian Pose)", "duration": "1 min" }
+    ],
     "videos": []
   },
   {
     "title": "Restorative Flow for Anxiety",
     "description": "Gentle poses like Child's Pose and Legs-up-the-Wall to calm the nervous system.",
-    "tags": ["anxiety", "calm", "relaxing", "evening"],
+    "tags": ["anxiety", "calm", "relaxing", "evening", "beginner"],
+    "steps": [
+      { "pose": "Child's Pose", "duration": "3 mins" },
+      { "pose": "Legs-up-the-Wall", "duration": "5 mins" },
+      { "pose": "Reclining Bound Angle Pose", "duration": "4 mins" }
+    ],
     "videos": []
   },
   {
     "title": "Deep Sleep Sequence",
     "description": "Slow, grounding poses designed to prepare the mind and body for restful sleep.",
-    "tags": ["sleep", "insomnia", "evening", "relaxing"],
+    "tags": ["sleep", "insomnia", "evening", "relaxing", "beginner"],
+    "steps": [
+      { "pose": "Forward Fold", "duration": "2 mins" },
+      { "pose": "Supine Spinal Twist", "duration": "3 mins" },
+      { "pose": "Savasana (Corpse Pose)", "duration": "5 mins" }
+    ],
     "videos": []
   },
   {
     "title": "Power Yoga for Focus",
     "description": "Intense poses like Warrior III and Crow Pose to build strength and mental clarity.",
-    "tags": ["focus", "strength", "energy", "intermediate"],
+    "tags": ["focus", "strength", "energy", "intermediate", "power"],
+    "steps": [
+      { "pose": "Warrior III", "duration": "1 min each side" },
+      { "pose": "High Lunge", "duration": "1 min each side" },
+      { "pose": "Crow Pose", "duration": "30s" }
+    ],
     "videos": []
   },
   {
     "title": "Lower Back Relief",
     "description": "Targeted stretches like Cat-Cow and Sphinx pose to alleviate tension in the lower spine.",
-    "tags": ["back-pain", "relief", "gentle", "healing"],
+    "tags": ["back-pain", "relief", "gentle", "healing", "beginner"],
+    "steps": [
+      { "pose": "Cat-Cow Stretch", "duration": "2 mins" },
+      { "pose": "Sphinx Pose", "duration": "2 mins" },
+      { "pose": "Cobra Pose", "duration": "1.5 mins" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Yin Yoga for Deep Tissue",
+    "description": "Long-held floor poses focusing on connective tissues and mindfulness.",
+    "tags": ["flexibility", "calm", "recovery", "deep-stretch", "intermediate"],
+    "steps": [
+      { "pose": "Butterfly Pose", "duration": "4 mins" },
+      { "pose": "Dragon Pose", "duration": "3 mins each side" },
+      { "pose": "Sphinx on Bolster", "duration": "5 mins" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Morning Vinyasa Flow",
+    "description": "Smooth transitions to wake up the spine and boost circulation.",
+    "tags": ["morning", "energy", "flow", "balanced", "intermediate"],
+    "steps": [
+      { "pose": "Cat-Cow Flow", "duration": "2 mins" },
+      { "pose": "Downward Facing Dog", "duration": "1 min" },
+      { "pose": "Warrior I", "duration": "1 min each side" },
+      { "pose": "Plank to Cobra", "duration": "1 min" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Core Stability Session",
+    "description": "Plank variations and Boat poses to strengthen your center.",
+    "tags": ["core", "strength", "stability", "focus", "intermediate"],
+    "steps": [
+      { "pose": "Plank", "duration": "1 min" },
+      { "pose": "Boat Pose", "duration": "45s x 3" },
+      { "pose": "Side Plank", "duration": "30s each side" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Neck & Shoulder Release",
+    "description": "Quick stretches for desk workers to ease upper body tension.",
+    "tags": ["stress-relief", "gentle", "quick", "office", "beginner"],
+    "steps": [
+      { "pose": "Seated Neck Rolls", "duration": "1 min" },
+      { "pose": "Eagle Arms", "duration": "1 min each side" },
+      { "pose": "Seated Cat-Cow", "duration": "2 mins" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Gentle Hatha for Balance",
+    "description": "Slow-paced poses focusing on alignment and steady breathing.",
+    "tags": ["balance", "calm", "hatha", "stability", "beginner"],
+    "steps": [
+      { "pose": "Tree Pose", "duration": "1 min each side" },
+      { "pose": "Mountain Pose", "duration": "2 mins" },
+      { "pose": "Warrior II", "duration": "1 min each side" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Hip Opening Sequence",
+    "description": "Deep stretches like Pigeon pose to release stored emotional tension.",
+    "tags": ["flexibility", "emotional-release", "grounding", "intermediate"],
+    "steps": [
+      { "pose": "Pigeon Pose", "duration": "3 mins each side" },
+      { "pose": "Happy Baby", "duration": "2 mins" },
+      { "pose": "Lizard Lunge", "duration": "2 mins each side" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Detox Twists",
+    "description": "Seated and standing twists to stimulate digestion and energy flow.",
+    "tags": ["detox", "energy", "digestion", "flow", "intermediate"],
+    "steps": [
+      { "pose": "Seated Spinal Twist", "duration": "2 mins each side" },
+      { "pose": "Crescent Lunge Twist", "duration": "1 min each side" },
+      { "pose": "Reclined Twist", "duration": "3 mins each side" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Warrior Challenge",
+    "description": "Standing poses to build heat and leg strength.",
+    "tags": ["strength", "heat", "challenge", "warrior", "intermediate"],
+    "steps": [
+      { "pose": "Warrior I", "duration": "1 min" },
+      { "pose": "Warrior II", "duration": "1 min" },
+      { "pose": "Reverse Warrior", "duration": "1 min" },
+      { "pose": "Humble Warrior", "duration": "1 min" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Zen Meditation Stretch",
+    "description": "Very gentle stretches followed by seated mindfulness.",
+    "tags": ["meditation", "calm", "zen", "mindfulness", "beginner"],
+    "steps": [
+      { "pose": "Easy Pose (Sukhasana)", "duration": "2 mins" },
+      { "pose": "Seated Side Stretch", "duration": "1 min each side" },
+      { "pose": "Silent Meditation", "duration": "10 mins" }
+    ],
+    "videos": []
+  },
+  {
+    "title": "Wall Yoga for Recovery",
+    "description": "Using props to support deep relaxation and spinal alignment.",
+    "tags": ["recovery", "gentle", "support", "relaxing", "beginner"],
+    "steps": [
+      { "pose": "Wall Butterfly", "duration": "5 mins" },
+      { "pose": "Wall Chest Opener", "duration": "2 mins each side" },
+      { "pose": "Legs-up-the-Wall", "duration": "10 mins" }
+    ],
     "videos": []
   }
 ]

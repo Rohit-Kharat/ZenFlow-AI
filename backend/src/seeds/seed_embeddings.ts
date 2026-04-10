@@ -1,13 +1,15 @@
 import { MongoClient } from 'mongodb';
-import OpenAI from 'openai';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const client = new MongoClient(process.env.DATABASE_URL || '');
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 async function seedRoutines() {
   try {
@@ -19,27 +21,16 @@ async function seedRoutines() {
       fs.readFileSync(path.join(__dirname, 'yoga_routines.json'), 'utf8')
     );
 
-    console.log(`Found ${routines.length} routines. Generating embeddings...`);
+    console.log(`Found ${routines.length} routines. Seeding into MongoDB...`);
 
     for (const routine of routines) {
-      // Generate embedding for the description and title
-      const textToEmbed = `${routine.title}: ${routine.description} ${routine.tags.join(' ')}`;
-      
-      const embeddingResponse = await openai.embeddings.create({
-        model: 'text-embedding-3-small',
-        input: textToEmbed,
-      });
-
-      const vector = embeddingResponse.data[0].embedding;
-
-      // Upsert into MongoDB
+      // Upsert into MongoDB without embeddings
       await collection.updateOne(
         { title: routine.title },
         { 
           $set: { 
             ...routine, 
-            vectors: vector,
-            userId: null // Seed data has no specific user
+            userId: null
           } 
         },
         { upsert: true }
@@ -48,7 +39,7 @@ async function seedRoutines() {
       console.log(`Seeded: ${routine.title}`);
     }
 
-    console.log('Seeding complete!');
+    console.log('Seeding complete! ZenFlow is now pure logic-based.');
   } catch (error) {
     console.error('Error seeding routines:', error);
   } finally {
