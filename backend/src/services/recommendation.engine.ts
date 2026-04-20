@@ -50,7 +50,7 @@ export class RecommendationEngine {
         return { ...routine, score: matches };
       });
 
-      // Sort by score and pick from the top matches
+
       scoredRoutines.sort((a, b) => b.score - a.score);
       const topScore = scoredRoutines[0].score;
       const topMatches = scoredRoutines.filter(r => r.score === topScore);
