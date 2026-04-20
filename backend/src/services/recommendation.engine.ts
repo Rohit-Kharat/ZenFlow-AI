@@ -3,9 +3,7 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 export class RecommendationEngine {
-  /**
-   * Deterministic logic to find a yoga routine based on mood, sleep, and time of day.
-   */
+
   async getRoutine(moodScore: number, sleepHours: number) {
     try {
       // 1. Determine "Time of Day"
