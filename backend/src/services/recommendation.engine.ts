@@ -6,7 +6,7 @@ export class RecommendationEngine {
 
   async getRoutine(moodScore: number, sleepHours: number) {
     try {
-      // 1. Determine "Time of Day"
+      
       const hour = new Date().getHours();
       let timeTag = 'morning';
       if (hour >= 11 && hour < 17) timeTag = 'afternoon';
