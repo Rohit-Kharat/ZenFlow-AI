@@ -57,7 +57,7 @@ export class AuthService {
   private async generateToken(userId: string) {
     const payload = {
       sub: userId,
-      exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7, // 1 week
+      exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7, 
     };
     return sign(payload, JWT_SECRET, 'HS256');
   }
