@@ -13,7 +13,7 @@ export class WellnessService {
     // Fetch the stored personalized recommendation
     const storedRoutine = await prisma.yogaRoutine.findFirst({
       where: { userId: userId },
-      orderBy: { id: 'desc' } // Assuming newer ones are created if we didn't update
+      orderBy: { id: 'desc' } // working on new user
     });
 
     const recentRecommendation = storedRoutine ? {
