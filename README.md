@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/fcfb60db-2f17-4f60-9d03-e88aa1c92b42
+
 # 🌿 ZenFlow AI: Your Mental Wellness Partner
 
 **ZenFlow AI** is a comprehensive, data-driven wellness companion that helps you find balance through a personalized yoga practice. By analyzing your daily mood and sleep metrics, ZenFlow creates a tailored experience that adapts to your body's rhythm in real-time.
